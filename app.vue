@@ -1,60 +1,26 @@
-<script setup lang="ts">
-    export default {
-      data: () => ({
-          drawer: false,
-      }),
-      props: {
-          source: String,
-      },
-    };
-</script>
-
 <!-- <template>
-  <div id="app"></div>
-</template> -->
-<template>
-  <v-app id="app">
-     <template v-if="!$route.path.includes('login')">
-        <v-navigation-drawer v-model="drawer" fixed app>
-           <v-toolbar flat dark color="success">
-              <v-list>
-                 <v-list-tile>
-                    <v-list-tile-title class="title">
-                       Simply Clinical Software
-                    </v-list-tile-title>
-                 </v-list-tile>
-              </v-list>
-           </v-toolbar>
-           <v-list dense>
-              <v-list-tile @click="drawer = false;" to="/login">
-                 <v-list-tile-action>
-                    <v-icon>home</v-icon>
-                 </v-list-tile-action>
-                 <v-list-tile-content>
-                    <v-list-tile-title>Login</v-list-tile-title>
-                 </v-list-tile-content>
-              </v-list-tile>
-              <v-list-tile @click="drawer = false;">
-                 <v-list-tile-action>
-                    <v-icon>contact_mail</v-icon>
-                 </v-list-tile-action>
-                 <v-list-tile-content>
-                    <v-list-tile-title>Contact</v-list-tile-title>
-                 </v-list-tile-content>
-              </v-list-tile>
-           </v-list>
-        </v-navigation-drawer>
-        <v-toolbar color="primary" dark fixed app>
-           <v-toolbar-side-icon
-              @click.stop="drawer = !drawer;"
-           ></v-toolbar-side-icon>
-           <v-toolbar-title>Application</v-toolbar-title>
-        </v-toolbar>
-     </template>
-     <v-content>
-        <keep-alive :include="['Login']">
-           <router-view></router-view>
-        </keep-alive>
-     </v-content>
-  </v-app>
-</template>
+   <div>
+     <v-card class="mx-auto" width="400">
+       <v-card-title>
+         Card Title
+       </v-card-title>
+       <v-card-text>
+         This is content
+       </v-card-text>
+       <v-card-actions>
+         <v-btn variant="text" color="teal-accent-4">
+           Learn More
+         </v-btn>
+       </v-card-actions>
+     </v-card>
+   </div>
+ </template> -->
+
+
+ <template>
+   <div>
+     <NuxtLayout>
+         <NuxtPage />
+     </NuxtLayout>
+   </div>
+ </template>

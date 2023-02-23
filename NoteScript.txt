@@ -57,13 +57,13 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-icon",
-    // [
-    //   "@nuxtjs/robots",
-    //   {
-    //     UserAgent: "*",
-    //     Disallow: "",
-    //   },
-    // ],
+     [
+       "@nuxtjs/robots",
+       {
+         UserAgent: "*",
+         Disallow: "",
+       },
+     ],
 
     // this adds the vuetify vite plugin
 		// also produces type errors in the current beta release
@@ -73,26 +73,26 @@ export default defineNuxtConfig({
 		},
   ],
   app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en'
+      head: {
+          htmlAttrs: {
+              lang: "en",
+          },
+          bodyAttrs: {
+              class: "demo"
+          },
+          charset: "utf-8",
+          titleTemplate: 'Sripreecha Holding',
+          meta: [
+              { 
+                name: 'viewport', 
+                content: 'width=device-width, initial-scale=1, maximum-scale=5'
+              },
+              {
+                name: 'author',
+                content: "Sripreecha Holding"
+              },
+            ]
       },
-      bodyAttrs: {
-        class: 'demo'
-      },
-      charset: 'utf-8',
-      titleTemplate: '%s - Nuxt 3 Vuetify',
-      meta: [
-        { 
-          name: 'viewport', 
-          content: 'width=device-width, initial-scale=1, maximum-scale=5'
-        },
-        {
-          name: 'author',
-          content: "IT Genius Engineering Ltd., Thailand"
-        },
-      ]
-    }
   },
 })
 
