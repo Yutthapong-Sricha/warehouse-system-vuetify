@@ -1,13 +1,16 @@
 <script lang="ts" setup></script>
 
 <template>
-	<div>
-		<VApp>
-			<VMain>
-				<slot />
-			</VMain>
-		</VApp>
-	</div>
+  <div>
+    <AppHeader />
+        <div>
+          layouts app
+          <slot />
+        </div>
+    <AppFooter/>
+  </div>
+
+
 </template>
 
 <style scoped></style>

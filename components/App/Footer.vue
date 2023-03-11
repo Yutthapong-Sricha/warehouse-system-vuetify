@@ -2,8 +2,7 @@
 
 <template>
   <div>
-    layouts app
-    <slot />
+    Component: App/Footer
   </div>
 </template>
 
